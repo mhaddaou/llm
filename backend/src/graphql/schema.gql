@@ -1,0 +1,27 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type UserProfileModel {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  age: Int!
+  email: String!
+  password: String!
+}
+
+type Query {
+  getAllUsers: [UserProfileModel!]!
+}
+
+type Mutation {
+  createUser(userInput: signUpInput!): UserProfileModel!
+}
+
+input signUpInput {
+  firstName: String!
+  lastName: String!
+  email: String!
+  password: String!
+}
